@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <script src='/socket.io/socket.io.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+
+<body>
+    <div id="product-form_container">
+        <h3>Add products</h3>
+        <form>
+            <input type="text" id="title" placeholder="Títle">
+            <input type="number" id="price" placeholder="price">
+            <input type="text" id="thumbnail" placeholder="thumbnail">
+            <input id="add-product" type="button" value="Send">
+        </form>
+    </div>
+    <hr>
+    <h2>Products</h2>
+    <div id="products"></div>
+
+     <h3> Chat </h3>
+    <form onsubmit="return addMessage()">
+        <input type='text' id='username' placeholder='user'/>
+        <input type='text' id='text' placeholder="message"/>
+        <input type='submit' value='Send'/>
+    </form>
+    <hr>
+    <div id="messages"></div>
+    
+<script src='/js/main.js'></script>
+</body>
+</html>
